@@ -1,10 +1,7 @@
-import React from "react";
-import ProductionReadyAi from "./Components/HomePage/Section/ProductionReadyAi";
+import "./App.css";
 
 function App() {
-  return <div >
-    <ProductionReadyAi />
-  </div>;
+  return <div className="App"></div>;
 }
 
 export default App;
