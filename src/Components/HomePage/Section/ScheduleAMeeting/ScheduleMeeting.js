@@ -34,7 +34,6 @@ const ScheduleMeeting = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Form submitted with data:", formData);
-    // Perform form submission logic here
   };
   const handleClick = () => {
     console.log("Button clicked!");
@@ -44,7 +43,6 @@ const ScheduleMeeting = () => {
     <Box sx={{ backgroundColor: "#340d73" }}>
       <CenteredContainer>
         <Grid container spacing={3}>
-          {/* Right Side - Title, Paragraph, and Button */}
           <Grid item xs={12} sm={12} md={6}>
             <Box style={{ padding: "20px", textAlign: "left" }}>
               <Typography
@@ -72,8 +70,6 @@ const ScheduleMeeting = () => {
               </AiButton>
             </Box>
           </Grid>
-
-          {/* Left Side - Form */}
           <Grid item xs={12} sm={6}>
             <Grid
               sx={{
@@ -87,12 +83,10 @@ const ScheduleMeeting = () => {
               }}
             >
               <form onSubmit={handleSubmit}>
-                {" "}
                 <Box sx={{ margin: "10px 40px" }}>
                   <Typography variant="h4" gutterBottom fontWeight="bold">
                     Schedule a Meeting
                   </Typography>
-
                   <TextField
                     fullWidth
                     margin="normal"
@@ -102,7 +96,6 @@ const ScheduleMeeting = () => {
                     onChange={handleChange}
                     variant="standard"
                   />
-
                   <TextField
                     fullWidth
                     margin="normal"
@@ -112,7 +105,6 @@ const ScheduleMeeting = () => {
                     onChange={handleChange}
                     variant="standard"
                   />
-
                   <TextField
                     fullWidth
                     margin="normal"
@@ -122,7 +114,6 @@ const ScheduleMeeting = () => {
                     onChange={handleChange}
                     variant="standard"
                   />
-
                   <TextField
                     fullWidth
                     margin="normal"
@@ -132,7 +123,6 @@ const ScheduleMeeting = () => {
                     onChange={handleChange}
                     variant="standard"
                   />
-
                   <TextField
                     fullWidth
                     margin="normal"
@@ -144,7 +134,6 @@ const ScheduleMeeting = () => {
                     onChange={handleChange}
                     variant="standard"
                   />
-
                   <AiButton
                     type="submit"
                     onClick={handleClick}
