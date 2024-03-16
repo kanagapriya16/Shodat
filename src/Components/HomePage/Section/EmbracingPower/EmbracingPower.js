@@ -18,7 +18,7 @@ export default function EmbracingPower() {
   return (
     <CenteredContainer>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm container>
+        <Grid item xs={12} sm={12} md={6} container>
           <Grid item xs container direction="column" spacing={2}>
             <Grid item xs>
               <Typography variant="h3" gutterBottom>

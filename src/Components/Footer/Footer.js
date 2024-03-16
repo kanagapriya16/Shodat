@@ -7,13 +7,16 @@ const Footer = () => {
   const gridContainerStyle = {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-evenly",
+    justifyContent: "space-around",
     alignItems: "flex-start",
     bgcolor: "black",
     color: "#CDCBD4",
     minHeight: "80vh",
-    [theme.breakpoints.down("sm")]: {
+
+    [theme.breakpoints.down("md")]: {
       flexDirection: "column",
+      display: "flex",
+      alignItems: "center",
       flex: 1,
     },
   };
@@ -22,8 +25,13 @@ const Footer = () => {
     flexDirection: "column",
     justifyContent: "space-around",
     alignItems: "flex-start",
-    mt: "6%",
-    width: "100%",
+    mt: "4%",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+      display: "flex",
+      alignItems: "center",
+      flex: 1,
+    },
   };
   const LinkStyle = {
     whiteSpace: "nowrap",
@@ -31,9 +39,9 @@ const Footer = () => {
   };
   return (
     <>
-      <Grid container spacing={3} sx={gridContainerStyle}>
+      <Grid container sx={gridContainerStyle}>
         <Grid item xs={12} sm={6} md={4} lg={1} sx={{ ...gridItemStyle }}>
-          <Typography variant="h4" style={LinkStyle}>
+          <Typography variant="h5" style={LinkStyle}>
             Shodat
           </Typography>
           <a style={LinkStyle}>Innovating Insights, Accelerating Growth</a>
@@ -42,22 +50,20 @@ const Footer = () => {
         </Grid>
 
         <Grid item xs={12} sm={6} md={4} lg={1} sx={{ ...gridItemStyle }}>
-          <Typography variant="h4" style={LinkStyle}>
+          <Typography variant="h5" style={LinkStyle}>
             Solution
           </Typography>
-          <a style={LinkStyle}>Platform</a>{" "}
           <a style={LinkStyle}>Data Engineering</a>
-          <a style={LinkStyle}>vision Ai</a>
+          <a style={LinkStyle}>Vision Ai</a>
           <a style={LinkStyle}>ERP Systems</a>
           <a style={LinkStyle}>Edge Analytics</a>
           <a h style={LinkStyle}>
-            intelligent Enterprise
+            Intelligent Enterprise
           </a>
-          <a style={LinkStyle}>cloud transformation</a>
+          <a style={LinkStyle}>loud transformation</a>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={1} sx={{ ...gridItemStyle }}>
-          <Typography variant="h4" style={LinkStyle}>
-            {" "}
+          <Typography variant="h5" style={LinkStyle}>
             Services
           </Typography>
           <a style={LinkStyle}>Innovate</a>
@@ -67,21 +73,21 @@ const Footer = () => {
           <a style={LinkStyle}>SAP HANA CoE</a>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={1} sx={{ ...gridItemStyle }}>
-          <Typography variant="h4" style={LinkStyle}>
-            ShodatAi
+          <Typography variant="h5" style={LinkStyle}>
+            ShodatAI
           </Typography>
-          <a style={LinkStyle}>Ai innovation</a>
-          <a style={LinkStyle}>Frictionless Ai</a>
-          <a style={LinkStyle}>Pillers of Ai</a>
+          <a style={LinkStyle}>AI Innovation</a>
+          <a style={LinkStyle}>Frictionless AI</a>
+          <a style={LinkStyle}>Pillers of AI</a>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={1} sx={{ ...gridItemStyle }}>
-          <Typography variant="h4" style={LinkStyle}>
-            eops Platform
+          <Typography variant="h5" style={LinkStyle}>
+            eOps Platform
           </Typography>
-          <a style={LinkStyle}>eops Watch</a>
-          <a style={LinkStyle}>eops Trace</a>
-          <a style={LinkStyle}>eops Prosense</a>
-          <a style={LinkStyle}>eops Insights</a>
+          <a style={LinkStyle}>eOps Watch</a>
+          <a style={LinkStyle}>eOps Trace</a>
+          <a style={LinkStyle}>eOps Prosense</a>
+          <a style={LinkStyle}>eOps Insights</a>
         </Grid>
       </Grid>
     </>
