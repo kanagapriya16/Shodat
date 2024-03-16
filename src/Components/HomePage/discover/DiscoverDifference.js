@@ -5,7 +5,6 @@ import modern from "../../../assets/modernize.jpg"
 import secure from "../../../assets/security.avif"
 import manage from "../../../assets/time.jpg"
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import Eops from '../../../Platform/Eops'
 function DiscoverDifference() {
     return (
         <Box height={'80vh'}>
@@ -161,7 +160,6 @@ function DiscoverDifference() {
                     </Card>
                 </Stack>
             </Box>
-            <Eops/>
         </Box>
     )
 }
