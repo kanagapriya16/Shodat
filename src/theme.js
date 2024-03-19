@@ -9,7 +9,7 @@ export const CustomButtoncenter = styled(Button)({
   width: "80px",
   marginTop: "-5%",
   fontSize: 12,
-  color: "black",
+  color: "white",
   height: 50, // Increased height
   padding: "0 30px",
   transition: "background-color 0.3s",
@@ -17,12 +17,15 @@ export const CustomButtoncenter = styled(Button)({
 export const CustomButton = styled(Button)({
   background: "#016C7B",
   border: 0,
-  borderRadius: 14,
+  borderRadius: "50px",
   width: "150px",
-  fontSize: 12,
+
   color: "white",
   height: 44,
   padding: "0 30px",
+  fontWeight: "400",
+  fontSize: "16px",
+  lineHeight: "24px",
   transition: "background-color 0.3s",
   whiteSpace: "nowrap",
   "&:hover": {
@@ -34,11 +37,17 @@ export const CustomButton = styled(Button)({
 
 export const CustomButton2 = styled(Button)({
   background: " #016C7B",
+  textTransform:"none",
   border: 0,
   borderRadius: 40,
-  width: 150,
-  fontSize: 10,
-  color: "white",
+  width: 100,
+  
+  fontSize: 16,
+  fontFamily:"Open Sans",
+  fontWeight:400,
+
+  color: " #FFFFFF",
+
   height: "50px",
   padding: "10px 20px 10px 20px",
   transition: "background-color 0.3s",

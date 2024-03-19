@@ -4,9 +4,11 @@ import img3 from "../../../../Assets/SliderHome/Home1.png";
 import img2 from "../../../../Assets/SliderHome/Home2.png";
 import { CustomButtoncenter } from "../../../../theme";
 import { ArrowDownward } from "@mui/icons-material";
+import ArrowRight from "../../../../Assets/SliderHome/arrow-right.png";
 import {
   CustomButtonStyled,
   StyledBox,
+  StyledBox2,
   TypographyContent,
 } from "./SliderStyles";
 import ArrowForward from "@mui/icons-material/ArrowForward";
@@ -27,10 +29,11 @@ const SliderHome = () => {
   return (
     <StyledBox style={{ backgroundImage: `url(${backgroundImage})` }}>
       <TypographyContent style={{ opacity: isFirstVisible ? 1 : 0 }}>
-        <Typography variant="h2">Innovating Insights,</Typography>
-        <Typography variant="h2">Accelerating Growth</Typography>
-        <Typography variant="h4">Your Data, Our Expertise</Typography>
+        <Typography variant="h1" color={"#FFFFFF"} fontSize={61}  Poppins fontWeight={600}  >Innovating Insights,</Typography>
+        <Typography variant="h1"    color={"#FFFFFF"} fontSize={61}  Poppins fontWeight={600 } >Accelerating Growth</Typography>
+        <Typography variant="h3" mt={2} color={"#FFFFFF"}  Poppins fontWeight={500}>Your Data, Our Expertise</Typography>
         <CustomButtonStyled
+      
           startIcon={
             <ArrowForward
               sx={{
@@ -47,11 +50,13 @@ const SliderHome = () => {
         </CustomButtonStyled>
       </TypographyContent>
       <TypographyContent style={{ opacity: isFirstVisible ? 0 : 1 }}>
-        <Typography variant="h2">Frictionless AI with Shodat</Typography>
-        <Typography variant="h4">
+        <Typography variant="h1" fontSize={61} fontWeight={600}>Frictionless AI with Shodat</Typography>
+        <Typography  fontWeight={500} fontSize={39} color={"#FFFFFF"}>
           Our AI Solutions pave the way for a
+          
         </Typography>
-        <Typography variant="h4">frictionless future,</Typography>
+        <Typography fontSize={39} fontWeight={500}  color={"#FFFFFF"}>frictionless future,</Typography>
+      
         <CustomButtonStyled
           startIcon={
             <ArrowForward
@@ -68,21 +73,14 @@ const SliderHome = () => {
           Get Started
         </CustomButtonStyled>
       </TypographyContent>
-      <CustomButtoncenter
-        style={{
-          background: "#F3D157",
-          justifyContent: "center",
-          display: "flex",
-          marginLeft: "50%",
-          marginTop: "37.8%",
-          height: "15vh",
-          fontSize: "20px",
-          textAlign: "center",
-          alignItems: "center",
+      <StyledBox2>
+        <img style={{
+  
+          marginTop:"12px",
         }}
-      >
-        <ArrowDownward sx={{}} />
-      </CustomButtoncenter>
+          
+         src={ArrowRight}></img>
+      </StyledBox2>
     </StyledBox>
   );
 };

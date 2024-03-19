@@ -4,6 +4,7 @@ import Home from "./Components/HomePage/Home";
 import PlatformPage from "./Components/PlatformPage/PlatformPage";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
+import { Abput } from "./Components/Abput";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/platform" element={<PlatformPage />} />
+          <Route path="/about" element={<Abput />} />
           {/* Add more routes for additional pages */}
         </Routes>
         <Footer />
