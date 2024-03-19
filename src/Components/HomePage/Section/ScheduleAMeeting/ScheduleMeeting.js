@@ -10,7 +10,7 @@ const CenteredContainer = styled("div")({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  margin: "50px",
+  margin: "0 50px",
   padding: "50px 30px",
 });
 

@@ -3,9 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Lato", sans-serif;
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -20,31 +22,29 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  width: 100vw;
-  background-color: #000000;
-  position: relative;
-  padding: 0px 70px;
-  background-color: #000000;
+  background-color: transparent;
+  height: 10vh;
   color: white;
+  position: absolute;
 }
-.navbar-logo {
-  color: #ff3f34;
-  text-decoration: none;
-  font-size: 25px;
-  padding: 0px 10px;
+.navbar.dark {
+  color: black; /* Set text color to white for dark background */
+  background-color: black;
 }
-
 .navbar-links {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap; /* Added to allow items to wrap on smaller screens */
+  margin-top: 5%;
 }
 
 .navbar-links li a {
   display: block;
   text-decoration: none;
   color: #ffffff;
-  padding: 20px 20px;
+  padding: 10px; /* Adjusted padding for smaller screens */
   transition: 0.4s all;
+  margin-left: 20px;
 }
 
 .navbar-links li.navbar-dropdown {
@@ -62,31 +62,101 @@ body {
   opacity: 0;
   position: absolute;
   padding: 20px 0;
+  text-align: left;
   top: 100%;
-  left: 0;
-  width: 250px;
-  background-color: #756bbf;
+  left: 0; /* Adjusted to start from the left side */
+  width: 180%; /* Changed width to 100% */
+  margin-left: 20px;
+  background-color: #432071;
   box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.3);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   z-index: 111;
   transition: 0.4s all;
+  border: 3px solid transparent; /* Added border */
+}
+
+.navbar-links li.navbar-dropdown:hover .dropdown {
+  border-top: 3px solid #f3d157; /* Change border color on hover */
 }
 
 .navbar-links li.navbar-dropdown .dropdown a {
   padding-top: 10px;
   padding-bottom: 10px;
   font-weight: 400;
+  color: #ffffff; /* Set default color */
 }
 
-.navbar-dropdown .dropdown a:hover {
-  padding-left: 30px;
+.navbar-links li.navbar-dropdown .dropdown a:hover {
+  color: #f3d157;
+  background-color: transparent; /* Change text color on hover */
 }
 
-.navbar-links li a:hover {
-  color: #fdec00;
+.navbar-links li a:hover,
+.navbar-links li a:focus,
+.navbar-links li a:active {
+  color: #000000;
+  background-color: #f3d157;
+  width: 100%;
+  border-radius: 10px;
+}
+.navbar-links li.navbar-dropdown .dropdown a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  color: #ffffff; /* Set default text color */
+  transition: 0.4s all; /* Add transition */
+}
+
+/* Hover effect for dropdown content links */
+.navbar-links li.navbar-dropdown .dropdown a:hover,
+.navbar-links li.navbar-dropdown .dropdown a:focus {
+  color: #f3d157; /* Change text color on hover */
+}
+
+/* Active effect for dropdown content links */
+.navbar-links li.navbar-dropdown .dropdown a:active,
+.navbar-links li.navbar-dropdown .dropdown a.active {
+  color: #f3d157; /* Change text color when active */
 }
 
 .navbar-dropdown.open .material-icons {
   transform: rotate(180deg);
+}
+/* Disable hover effect on logo */
+.navbar-links li img:hover {
+  filter: none;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .navbar-links {
+    width: 100%; /* Set full width for smaller screens */
+    justify-content: flex-start; /* Align items to the start */
+  }
+
+  .navbar-links li.navbar-dropdown .dropdown {
+    position: static; /* Change position to static to make dropdowns appear below */
+    width: auto; /* Set width to auto for dropdowns */
+    max-width: none; /* Remove max-width */
+    box-shadow: none; /* Remove box shadow */
+    border-radius: 0; /* Remove border radius */
+    background-color: transparent; /* Make background transparent */
+    padding: 0; /* Remove padding */
+    transition: none; /* Remove transition */
+    border: none; /* Remove border */
+  }
+
+  .navbar-links li a {
+    padding: 10px 0; /* Adjust padding for smaller screens */
+  }
+
+  .navbar-links li.navbar-dropdown .dropdown a:hover {
+    padding-left: 0; /* Remove left padding on hover */
+  }
 }

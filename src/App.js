@@ -1,17 +1,23 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Components/HomePage/Home";
-import PlatfromPage from "./Components/PlatformPage/PlatfromPage";
+import PlatformPage from "./Components/PlatformPage/PlatformPage";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Home />
-      {/* <PlatfromPage /> */}
-      <Footer />
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/platform" element={<PlatformPage />} />
+          {/* Add more routes for additional pages */}
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

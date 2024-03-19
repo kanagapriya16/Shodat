@@ -9,7 +9,7 @@ const CenteredContainer = styled("div")({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  margin: "50px",
+  margin: "80px",
 });
 export default function EmbracingPower() {
   const handleClick = () => {
