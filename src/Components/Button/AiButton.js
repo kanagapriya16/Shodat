@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import ExpandCircleDownRoundedIcon from "@mui/icons-material/ExpandCircleDownRounded";
-import { color, styled } from "@mui/system";
+import { styled } from "@mui/system";
 
 // Styled icon with rotation
 const RotatedIcon = styled(ExpandCircleDownRoundedIcon)({
@@ -15,6 +15,7 @@ export default function AiButton({
   width,
   color,
   background,
+  padding,
 }) {
   return (
     <Button
@@ -30,7 +31,7 @@ export default function AiButton({
         width: width || "50%",
         borderRadius: "15px",
         marginTop: "4%",
-        padding: "10px 20px 10px 20px",
+        padding: padding || "10px 20px",
         borderRadius: 10,
         "&:hover": {
           backgroundColor: background || "#340d73",

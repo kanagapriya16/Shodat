@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Typography } from "@mui/material";
-import img2 from "../../../../Assets/img2.jpg";
-import img3 from "../../../../Assets/img3.jpg";
-
+import img3 from "../../../../Assets/SliderHome/Home1.png";
+import img2 from "../../../../Assets/SliderHome/Home2.png";
+import { CustomButtoncenter } from "../../../../theme";
+import { ArrowDownward } from "@mui/icons-material";
 import {
   CustomButtonStyled,
   StyledBox,
   TypographyContent,
 } from "./SliderStyles";
+import ArrowForward from "@mui/icons-material/ArrowForward";
 
 const SliderHome = () => {
   const [isFirstVisible, setIsFirstVisible] = useState(true);
@@ -25,29 +27,62 @@ const SliderHome = () => {
   return (
     <StyledBox style={{ backgroundImage: `url(${backgroundImage})` }}>
       <TypographyContent style={{ opacity: isFirstVisible ? 1 : 0 }}>
-        <Typography variant="h2" fontWeight={800}>
-          innovating insights,
-        </Typography>
-        <Typography variant="h2" fontWeight={800}>
-          Accelarting Growth
-        </Typography>
-        <Typography variant="h4" fontWeight={800}>
-          Your data, our Expertise
-        </Typography>
-        <CustomButtonStyled>Get Started</CustomButtonStyled>
+        <Typography variant="h2">Innovating Insights,</Typography>
+        <Typography variant="h2">Accelerating Growth</Typography>
+        <Typography variant="h4">Your Data, Our Expertise</Typography>
+        <CustomButtonStyled
+          startIcon={
+            <ArrowForward
+              sx={{
+                bgcolor: "white",
+                height: "20px",
+                width: "20px",
+                borderRadius: "100%",
+                color: "black",
+              }}
+            />
+          }
+        >
+          Get Started
+        </CustomButtonStyled>
       </TypographyContent>
       <TypographyContent style={{ opacity: isFirstVisible ? 0 : 1 }}>
-        <Typography variant="h2" fontWeight={800}>
-          Frictionless Ai With Shodat
+        <Typography variant="h2">Frictionless AI with Shodat</Typography>
+        <Typography variant="h4">
+          Our AI Solutions pave the way for a
         </Typography>
-        <Typography variant="h4" fontWeight={800}>
-          our Ai Solutions Pave the way for a{" "}
-        </Typography>
-        <Typography variant="h4" fontWeight={800}>
-          frictional future,
-        </Typography>
-        <CustomButtonStyled>Get Started</CustomButtonStyled>
+        <Typography variant="h4">frictionless future,</Typography>
+        <CustomButtonStyled
+          startIcon={
+            <ArrowForward
+              sx={{
+                bgcolor: "white",
+                height: "20px",
+                width: "20px",
+                borderRadius: "100%",
+                color: "black",
+              }}
+            />
+          }
+        >
+          Get Started
+        </CustomButtonStyled>
       </TypographyContent>
+      <CustomButtoncenter
+        style={{
+          background: "#F3D157",
+          justifyContent: "center",
+          display: "flex",
+          marginLeft: "50%",
+          marginTop: "37.8%",
+          height: "15vh",
+          fontSize: "20px",
+          textAlign: "center",
+          alignItems: "center",
+        }}
+      >
+        <ArrowDownward sx={{}} />
+      </CustomButtoncenter>
     </StyledBox>
   );
 };

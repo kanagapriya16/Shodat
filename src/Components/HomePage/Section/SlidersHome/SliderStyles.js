@@ -1,17 +1,17 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import { CustomButton2 } from "../../../../theme";
 
 export const StyledBox = styled(Box)({
   display: "flex",
-  height: "90vh",
+  height: "100vh",
   alignItems: "center",
   borderRadius: "0px",
   boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
   position: "relative",
   backgroundSize: "cover",
   backgroundPosition: "center",
-  transition: "background-image 0.5s ease-in-out",
+  transition: "background-image 0.5s ease-in-out", // Add transition for background image change
 });
 
 export const TypographyContent = styled(Box)(({ theme }) => ({

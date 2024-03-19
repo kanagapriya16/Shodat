@@ -1,34 +1,58 @@
 import { Button, styled } from "@mui/material";
 
-export const CustomButton = styled(Button)({
-  background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+export const CustomButtoncenter = styled(Button)({
+  background: "#F3D157",
   border: 0,
-  borderRadius: 40,
-  width: 150,
-  fontSize: 10,
-  boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-  color: "white",
-  height: 30,
+  justifyContent: "center",
+  display: "flex",
+  position: "absolute",
+  width: "80px",
+  marginTop: "-5%",
+  fontSize: 12,
+  color: "black",
+  height: 50, // Increased height
   padding: "0 30px",
   transition: "background-color 0.3s",
+});
+export const CustomButton = styled(Button)({
+  background: "#016C7B",
+  border: 0,
+  borderRadius: 14,
+  width: "150px",
+  fontSize: 12,
+  color: "white",
+  height: 44,
+  padding: "0 30px",
+  transition: "background-color 0.3s",
+  whiteSpace: "nowrap",
   "&:hover": {
-    background: "#8295b3",
-    borderRadius: 14,
+    background:
+      "linear-gradient(110.53deg, #00C4CC -8.24%, #3E4499 32.83%, #5E027F 82.38%, #F4BE00 106.38%)",
+    borderRadius: 2,
   },
 });
 
 export const CustomButton2 = styled(Button)({
-  background: "blue",
+  background: " #016C7B",
   border: 0,
   borderRadius: 40,
   width: 150,
   fontSize: 10,
   color: "white",
   height: "50px",
-  padding: "0 30px",
+  padding: "10px 20px 10px 20px",
   transition: "background-color 0.3s",
   "&:hover": {
-    background: "#8295b3",
+    background:
+      "linear-gradient(110.53deg, #00C4CC -8.24%, #3E4499 32.83%, #5E027F 82.38%, #F4BE00 106.38%)",
+
     borderRadius: 14,
   },
 });
+export const Iconstyle = {
+  bgcolor: "white",
+  height: "20px",
+  width: "20px",
+  borderRadius: 100,
+  color: "black",
+};
